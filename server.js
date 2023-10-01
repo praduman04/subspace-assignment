@@ -17,7 +17,7 @@ app.get('/api/blog-stats', async (req, res) => {
           }
       }); 
       
-      const blogs = blogData.data.blogs; // Assuming the data is an array of blogs
+      const blogs = blogData.data.blogs;
       
       const totalBlogs =_.size(blogs);
        const longestTitleBlog = _.maxBy(blogs, 'title.length').title;
