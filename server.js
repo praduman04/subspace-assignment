@@ -41,7 +41,7 @@ app.get('/api/blog-stats', async (req, res) => {
   });
   app.get("/api/blog-search",async(req,res)=>{
     try {
-      const query = req.query.text
+      const query = req.query.query
       if (!query) {
         return res.status(400).json({ error: 'Query parameter "query" is required' });
       }
